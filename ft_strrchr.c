@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 15:19:09 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/16 15:19:12 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/16 15:54:02 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_strrchr(const char *s, int c)
 	const char	*last;
 
 	last = NULL;
-	while(1)
+	while (1)
 	{
-		if((unsigned char)*s == (unsigned char)c)
+		if ((unsigned char)*s == (unsigned char)c)
 			last = s;
-		if(*s == '\0')
+		if (*s == '\0')
 			break ;
 		s++;
 	}
-	return((char *)last);
+	return ((char *)last);
 }

@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 15:08:55 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/16 15:09:30 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/16 15:53:08 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strdup(const char *s)
 
 	len = ft_strlen(s);
 	copy = (char *)malloc(len + 1);
-	if(copy == NULL)
+	if (copy == NULL)
 		return (NULL);
 	ft_memcpy(copy, s, len + 1);
-	return(copy);
+	return (copy);
 }

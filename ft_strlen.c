@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 15:13:15 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/16 15:13:17 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/16 15:53:36 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
-	return(i);
+	return (i);
 }

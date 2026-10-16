@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 15:06:40 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/16 15:07:24 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/16 15:53:02 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while(*s != '\0')
+	while (*s != '\0')
 	{
-		if((unsigned char)*s == (unsigned char)c)
-			return((char *)s);
+		if ((unsigned char)*s == (unsigned char)c)
+			return ((char *)s);
 		s++;
 	}
 	if((unsigned char)c == 0)
-		return((char *)s);
-	return(NULL);
+		return ((char *)s);
+	return (NULL);
 }
