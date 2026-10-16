@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 14:59:18 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/16 15:51:59 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/16 15:59:08 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*s;
 	size_t				i;
 
-	if(dest == src)
+	if (dest == src)
 		return (dest);
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
