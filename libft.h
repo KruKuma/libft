@@ -3,6 +3,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 /* Part 1: Character classification and conversion */
 int			ft_isalpha(int c);
