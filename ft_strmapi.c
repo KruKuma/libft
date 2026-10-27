@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 13:09:46 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/27 13:09:47 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/27 13:12:14 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*result;
+	char	*result;
 	size_t	i;
 	size_t	len;
 

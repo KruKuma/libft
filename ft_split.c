@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 13:09:21 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/27 13:09:22 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/27 14:05:15 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,37 +54,48 @@ static char	*copy_word(char const *s, size_t len)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static int	fill_words(char **words, char const *s, char c)
 {
-	char	**words;
 	size_t	i;
 	size_t	len;
 
-	if (!s)
-		return (NULL);
-	len = word_count(s, c);
-	if (len > (size_t)-1 / sizeof(char *) - 1)
-		return (NULL);
-	words = malloc((len + 1) * sizeof(char *));
-	if (!words)
-		return (NULL);
 	i = 0;
 	while (*s)
 	{
 		while (*s && *s == c)
-			s++;
-		len = 0;
-		while (s[len] && s[len] != c)
-			len++;
-		if (len)
 		{
-			words[i] = copy_word(s, len);
-			if (!words[i])
-				return (free_words(words, i), NULL);
-			i++;
-			s += len;
+			s++;
+			len = 0;
+			while (s[len] && s[len] != c)
+				len++;
+			if (len)
+			{
+				words[i] = copy_word(s, len);
+				if (!words[i])
+					return (free_words(words, i), 0);
+				i++;
+				s += len;
+			}
 		}
 	}
 	words[i] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**words;
+	size_t	count;
+
+	if (!s)
+		return (NULL);
+	count = word_count(s, c);
+	if (count > (size_t) - 1 / sizeof(char *) - 1)
+		return (NULL);
+	words = malloc((count + 1) * sizeof(char *));
+	if (!words)
+		return (NULL);
+	if (!fill_words(words, s, c))
+		return (NULL);
 	return (words);
 }
