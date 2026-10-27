@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 13:09:32 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/27 13:17:15 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/27 14:12:44 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
 	size_t	len1;
 	size_t	len2;
 	char	*joined;
