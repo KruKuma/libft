@@ -6,7 +6,7 @@
 /*   By: nfurst <nfurst@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 13:09:21 by nfurst            #+#    #+#             */
-/*   Updated: 2026/10/27 14:05:15 by nfurst           ###   ########.fr       */
+/*   Updated: 2026/10/27 14:34:49 by nfurst           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,19 +63,17 @@ static int	fill_words(char **words, char const *s, char c)
 	while (*s)
 	{
 		while (*s && *s == c)
-		{
 			s++;
-			len = 0;
-			while (s[len] && s[len] != c)
-				len++;
-			if (len)
-			{
-				words[i] = copy_word(s, len);
-				if (!words[i])
-					return (free_words(words, i), 0);
-				i++;
-				s += len;
-			}
+		len = 0;
+		while (s[len] && s[len] != c)
+			len++;
+		if (len)
+		{
+			words[i] = copy_word(s, len);
+			if (!words[i])
+				return (free_words(words, i), 0);
+			i++;
+			s += len;
 		}
 	}
 	words[i] = NULL;
